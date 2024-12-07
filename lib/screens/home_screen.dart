@@ -54,6 +54,27 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: const Icon(CupertinoIcons.home),
+              title: const Text('Popüler Eserler'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(CupertinoIcons.home),
+              title: const Text('Popüler Sanatçılar'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(CupertinoIcons.person),
+              title: const Text('Profil'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
               leading: const Icon(CupertinoIcons.settings),
               title: const Text('Ayarlar'),
               onTap: () {
@@ -77,25 +98,35 @@ class HomeScreen extends StatelessWidget {
       ),
 
       // Alt navigasyon çubuğu
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Ana Sayfa',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
-            label: 'Keşfet',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Profil',
-          ),
-        ],
-        onTap: (index) {
-          // Navigasyon işlemleri buraya gelecek
-        },
-      ),
+      bottomNavigationBar: Container(
+        height: 70,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+              onPressed: () {},
+               icon: Icon(
+                CupertinoIcons.home,
+              ),
+            ),
+
+            IconButton(
+              onPressed: () {},
+               icon: Icon(
+                CupertinoIcons.search,
+              ),
+            ),
+
+            IconButton(
+              onPressed: () {},
+               icon: Icon(
+                CupertinoIcons.person,
+              ),
+            ),
+
+          ],
+        ),
+      )
     );
   }
 }
