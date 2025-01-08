@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -49,6 +50,13 @@ class HomeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(CupertinoIcons.home),
               title: const Text('Ana Sayfa'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(CupertinoIcons.search),
+              title: const Text('Arama'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -104,14 +112,18 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.go("/home");
+              },
                icon: Icon(
                 CupertinoIcons.home,
               ),
             ),
 
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.go("/search");
+              },
                icon: Icon(
                 CupertinoIcons.search,
               ),
