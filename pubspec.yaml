@@ -14,14 +14,14 @@ dependencies:
   flutter_secure_storage: ^9.2.2
   go_router: ^14.2.3
   google_fonts: ^6.2.1
-  lottie: ^3.1.3
+  lottie: ^3.3.0  # Bu sürüm çalıştığından emin oldum
   provider: ^6.1.2
   shared_preferences: ^2.2.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^2.0.3 # Bu sürüm uyumlu olacak
 
 flutter:
   uses-material-design: true
