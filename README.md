@@ -1,11 +1,10 @@
-# GeeksBook
+# Marvel Of Art
 
 ![İstinye Üniversitesi](https://www.unitededucation.com/linklogoch/istinye-university-logo.png)
 
 ## Proje Hakkında
 
-Geek’s Book, kullanıcıların izledikleri film ve dizileri kaydedip puanlayabileceği, yorumlarını paylaşabileceği ve başkalarının listelerine göz
-atabileceği bir platformdur.
+Marvel of Art,kullanıcının başka sanat eserlerini rahatça görüntüleyebildiği satın alabildiği ve başka sanatçılar ile iletişime geçebildiği bir platformdur.
 
 
 ## Ekibimiz
@@ -16,12 +15,14 @@ atabileceği bir platformdur.
 
 -  **Takım Üyeleri:**
 
--  [GitHub]
+-  [GitHub]https://github.com/tariklus(Tarık Luş)
 
 
 ## Özellikler
 
+Aradığınız resim ve ressamlar  tek bir ekranda.
 
+Farklı sanatçılar ile ufkunu genişlet.
 
 ## Kullanılan Teknolojiler
 
@@ -128,7 +129,7 @@ lib/
 
 ## İletişim
 
-- Proje Bağlantısı: [[)]
+- Proje Bağlantısı: [[https://github.com/tariklus/Q-Flutter)]
 
 - İstinye Üniversitesi: [https://www.istinye.edu.tr/](https://www.istinye.edu.tr/)
 
