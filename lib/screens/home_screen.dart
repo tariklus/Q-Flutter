@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
+// ignore: unused_import
+import '../widgets/bottom_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -50,44 +52,27 @@ class HomeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(CupertinoIcons.home),
               title: const Text('Ana Sayfa'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: ()  => Navigator.pop(context),
             ),
             ListTile(
               leading: const Icon(CupertinoIcons.search),
               title: const Text('Arama'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(CupertinoIcons.home),
-              title: const Text('Popüler Eserler'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(CupertinoIcons.home),
-              title: const Text('Popüler Sanatçılar'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () => context.push("/search"),
             ),
             ListTile(
               leading: const Icon(CupertinoIcons.person),
               title: const Text('Profil'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () => context.push("/profile"),
             ),
             ListTile(
               leading: const Icon(CupertinoIcons.settings),
               title: const Text('Ayarlar'),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () => context.push("/settings"),
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Çıkış Yap'),
+              onTap: () => context.go("/login"),
             ),
           ],
         ),
@@ -106,39 +91,7 @@ class HomeScreen extends StatelessWidget {
       ),
 
       // Alt navigasyon çubuğu
-      bottomNavigationBar: Container(
-        height: 70,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {
-                context.go("/home");
-              },
-               icon: Icon(
-                CupertinoIcons.home,
-              ),
-            ),
-
-            IconButton(
-              onPressed: () {
-                context.go("/search");
-              },
-               icon: Icon(
-                CupertinoIcons.search,
-              ),
-            ),
-
-            IconButton(
-              onPressed: () {},
-               icon: Icon(
-                CupertinoIcons.person,
-              ),
-            ),
-
-          ],
-        ),
-      )
-    );
+      bottomNavigationBar: const BottomMenu(),
+  );
   }
 }
