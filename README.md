@@ -107,17 +107,6 @@ lib/
 
 ## Ekran Görüntüleri
 
-## Projeye Katkı Sağlama
-
-1. Projeyi forklayın
-
-2. Yeni bir dal oluşturun (`git checkout -b ozellik/YeniOzellik`)
-
-3. Değişikliklerinizi kaydedin (`git commit -m 'Yeni özellik eklendi'`)
-
-4. Dalınıza gönderin (`git push origin ozellik/YeniOzellik`)
-
-5. Pull Request oluşturun
 
 
 
