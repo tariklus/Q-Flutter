@@ -102,7 +102,7 @@ lib/
 
 ## Demo Video
 
-
+https://youtu.be/wAPA-EdO_lU
 
 
 ## Ekran Görüntüleri
