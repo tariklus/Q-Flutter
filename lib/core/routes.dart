@@ -3,7 +3,7 @@ import 'package:flutter_app/screens/profile_screen.dart';
 import 'package:go_router/go_router.dart';
 import '../screens/loading_screen.dart';
 import '../screens/home_screen.dart';
-
+import 'package:go_router/go_router.dart';
 // Router yapılandırması
 final router = GoRouter(
   initialLocation: '/',  // Başlangıç rotası

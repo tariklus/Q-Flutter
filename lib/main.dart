@@ -4,8 +4,13 @@ import 'package:provider/provider.dart';
 import 'core/routes.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();  // Flutter widget'larını başlat
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized(); // Flutter widget'larını başlat
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,15 +18,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final themeProvider = context.watch<ThemeProvider>();
-      return MaterialApp.router(
-        title: 'Flutter App',
-        themeMode: themeProvider.isDark ? ThemeMode.dark : ThemeMode.light,
-        theme: lightTheme,
-        darkTheme: darkTheme,
-        routerConfig: router, // go_router yapılandırmamızı kullan
-        debugShowCheckedModeBanner: false, // Debug bandını kaldır
-      );
-    
+    return Consumer<ThemeProvider>(
+      builder: (context, themeProvider, child) {
+        return MaterialApp.router(
+          title: 'Flutter App',
+          themeMode: themeProvider.isDark ? ThemeMode.dark : ThemeMode.light,
+          theme: lightTheme,
+          darkTheme: darkTheme,
+          routerConfig: router, // go_router yapılandırmamızı kullan
+          debugShowCheckedModeBanner: false, // Debug bandını kaldır
+        );
+      },
+    );
   }
 }
